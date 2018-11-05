@@ -18,6 +18,17 @@
     "url": "https://github.com/akarpas/giphy-animals/issues"
   },
   "homepage": "https://github.com/akarpas/giphy-animals#readme",
+  "jest": {
+    "verbose": false,
+    "setupTestFrameworkScriptFile": "./__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "./__tests__/setup/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-loader": "7.1.5",
@@ -30,6 +41,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
   },
