@@ -1,11 +1,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
 import Home from '../../src/components/pages/Home';
 
 let wrapper;
 
 beforeEach(() => {
-  wrapper = mount(<Home />);
+  wrapper = mount(
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>,
+  );
 });
 
 afterEach(() => {
