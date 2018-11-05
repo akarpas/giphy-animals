@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "7.1.5",
     "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
