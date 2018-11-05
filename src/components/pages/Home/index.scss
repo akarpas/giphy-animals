@@ -9,7 +9,143 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-align: center;
-  margin: 10px 0;
+  margin-top: 1rem;
+}
+
+.animals {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 2rem 0 2rem 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  padding: 3px 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 1vh 0.2rem 1vh 0.2rem;
+  font-size: 1.25rem;
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: lightsteelblue;
+}
+
+.button:active {
+  color: darkgray;
+  background-color: blue;
+}
+
+@media screen and (min-width: 500px) {
+  .button {
+    width: 22.5vw;
+    height: 22.5vw;
+  }
+  .animals {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .button {
+    width: 20vw;
+    height: 20vw;
+  }
+  .animals {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .button {
+    width: 25vw;
+    height: 25vw;
+  }
+  .animals {
+    width: 75%;
+  }
+  .title {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .button {
+    width: 22.5vw;
+    height: 22.5vw;
+  }
+  .title {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+  .button {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    width: 20vw;
+    height: 20vw;
+  }
+  .animals {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    width: 17.5vw;
+    height: 17.5vw;
+  }
+  .animals {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    width: 15vw;
+    height: 15vw;
+  }
+  .animals {
+    width: 55%;
+  }
+}
+
+@media screen and (min-height: 300px) and (max-width: 1000px) and (orientation: landscape) {
+  .button {
+    width: 18vw;
+    height: 18vw;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 0.25rem;
+  }
+  .animals {
+    margin: 0.25rem;
+    width: 100%;
+  }
 }
