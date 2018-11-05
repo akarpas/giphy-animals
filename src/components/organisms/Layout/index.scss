@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: auto;
+  padding: 5px 1vw 5px 1vw;
+  color: black;
+  width: 98vw;
+  background-color: lightskyblue;
+}
+
+.content {
+  height: auto;
+  margin: 10px 0.5vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
