@@ -4,7 +4,9 @@
   "description": "Random Giphy Animals from Giphy API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "lint": "eslint ./src --ext .js"
   },
   "repository": {
     "type": "git",
