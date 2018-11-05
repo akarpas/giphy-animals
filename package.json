@@ -18,10 +18,20 @@
   "homepage": "https://github.com/akarpas/giphy-animals#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-loader": "7.1.5",
+    "css-loader": "^1.0.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.25.0"
   }
 }
