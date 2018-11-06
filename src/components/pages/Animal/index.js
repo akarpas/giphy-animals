@@ -14,9 +14,11 @@ class Animal extends React.Component {
     };
     this.changeGiphy = this.changeGiphy.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
 
   componentDidMount() {
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
     const { location, dispatch, history } = this.props;
     const { query } = location;
     if (query === undefined) {
@@ -28,16 +30,29 @@ class Animal extends React.Component {
   }
 
   componentWillUnmount() {
+    document.removeEventListener('visibilitychange', this.handleVisibilityChange);
     const { dispatch } = this.props;
     clearInterval(this.timer);
     giphyActions.clearGiphies(dispatch);
   }
 
+  handleVisibilityChange() {
+    const { visibilityState } = document;
+    if (visibilityState === 'visible') {
+      this.setState({ pause: false });
+    } else {
+      this.setState({ pause: true });
+    }
+  }
+
   changeGiphy() {
-    const { giphies } = this.props;
-    const numberOfGiphies = giphies.length;
-    const giphyIndex = random(0, numberOfGiphies - 1);
-    this.setState({ giphyIndex });
+    const { pause } = this.state;
+    if (!pause) {
+      const { giphies } = this.props;
+      const numberOfGiphies = giphies.length;
+      const giphyIndex = random(0, numberOfGiphies - 1);
+      this.setState({ giphyIndex });
+    }
   }
 
   handleClick(e) {
@@ -74,7 +89,6 @@ class Animal extends React.Component {
                   src={giphy.url}
                   className={style.iframe}
                   frameBorder="0"
-                  allowFullScreen
                   title={giphy.title}
                 />
               )}
