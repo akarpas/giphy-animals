@@ -6,6 +6,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import createStore from './store';
 import Home from './components/pages/Home';
+import Animal from './components/pages/Animal';
 
 import style from './index.scss';
 
@@ -17,7 +18,8 @@ const Application = () => {
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} key="1" />
+            <Route exact path="/animal" component={Animal} key="2" />
           </Switch>
         </BrowserRouter>
       </Provider>
