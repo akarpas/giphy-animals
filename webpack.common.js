@@ -14,7 +14,7 @@ module.exports = {
     hints: false,
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: false,
   },
   module: {
     rules: [
