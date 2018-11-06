@@ -11,9 +11,14 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const setGiphies = (state, payload) => { // eslint-disable-line
+const setGiphies = (state, payload) => {
   const { data } = payload;
-  const giphies = data.map(giphy => ({ url: giphy.embed_url, title: giphy.title }));
+  const giphies = data.map(giphy => ({
+    url: giphy.images.original.url,
+    title: giphy.title,
+    height: giphy.images.original.height,
+    width: giphy.images.original.width,
+  }));
   return { ...state, giphies, loading: false, error: null };
 };
 
