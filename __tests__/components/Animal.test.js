@@ -70,4 +70,11 @@ describe('has a giphy', () => {
   it('contains an iframe for the giphy', () => {
     expect(wrapper.find('iframe').length).toEqual(1);
   });
+  it('receives an array of giphy urls and is not loading', () => {
+    expect(typeof store.getState().giphy.giphies).toBe('object');
+    expect(typeof store.getState().giphy.giphies).toBe('object');
+    expect(store.getState().giphy.giphies[0].url).toBeTruthy();
+    expect(store.getState().giphy.giphies[0].url).toContain('https');
+    expect(store.getState().giphy.loading).toBe(false);
+  });
 });
