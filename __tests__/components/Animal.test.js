@@ -47,6 +47,10 @@ describe('main content', () => {
     expect(wrapper.find('.giphyContainer').length).toEqual(1);
   });
 
+  it('contains a loading text', () => {
+    expect(wrapper.find('.loading').length).toEqual(1);
+  });
+
   it('contains two buttons for flipping giphies and changing animals', () => {
     expect(wrapper.find('button').length).toEqual(2);
     expect(wrapper.find('button').at(0).props().children).toContain('Flip');
