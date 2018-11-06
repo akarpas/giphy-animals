@@ -85,12 +85,7 @@ class Animal extends React.Component {
             {loading && <div className={style.loading}>Loading Giphy...</div>}
             {giphy
               && (
-                <iframe
-                  src={giphy.url}
-                  className={style.iframe}
-                  frameBorder="0"
-                  title={giphy.title}
-                />
+                <img src={giphy.url} alt={giphy.title} className={style.gif} height="80vw" />
               )}
           </div>
           <div className={style.controls}>
