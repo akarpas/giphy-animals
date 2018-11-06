@@ -11,7 +11,7 @@ const Home = () => {
         <div className={style.title}>Choose your favorite animal:</div>
         <div className={style.animals}>
           {animals.map(animal => (
-            <Link className={style.link} key={`link-${animal}`} to={{ pathname: '/animal', query: { animal } }}>
+            <Link className={style.link} key={`link-${animal}`} to={{ pathname: '/animal', query: animal }}>
               <button className={style.button} id={animal} key={animal} type="button">{animal}</button>
             </Link>))}
         </div>

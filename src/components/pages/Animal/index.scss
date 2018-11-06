@@ -1,0 +1,72 @@
+iframe {
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  color: black;
+}
+
+.giphyContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-height: 75%;
+  min-height: 70vh;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  width: auto;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: auto;
+  padding: 1.25rem 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1vh 0.2rem 1vh 0.2rem;
+  font-size: 1.25rem;
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: lightsteelblue;
+}
+
+.button:active {
+  color: darkgray;
+  background-color: blue;
+}
+
+.iframe {
+  min-height: 50vh;
+  width: 100%;
+}
+
