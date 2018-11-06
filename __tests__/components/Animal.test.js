@@ -67,8 +67,8 @@ describe('has a giphy', () => {
   afterAll(() => { // eslint-disable-line
     wrapper.unmount();
   });
-  it('contains an iframe for the giphy', () => {
-    expect(wrapper.find('iframe').length).toEqual(1);
+  it('contains an image for the giphy', () => {
+    expect(wrapper.find('img').length).toEqual(1);
   });
   it('receives an array of giphy urls and is not loading', () => {
     expect(typeof store.getState().giphy.giphies).toBe('object');
