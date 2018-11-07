@@ -1,11 +1,12 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import random from 'lodash.random';
 import Layout from '../../organisms/Layout';
 import Controls from '../../molecules/Controls';
 import GiphyRandom from '../../molecules/GiphyRandom';
 import GiphyGallery from '../../molecules/GiphyGallery';
+import GiphyModal from '../../atoms/GiphyModal';
 import * as giphyActions from '../../../actions/giphy';
 import style from './index.scss';
 
@@ -14,7 +15,7 @@ class Animal extends React.Component {
     super(props);
     this.state = {
       giphyIndex: random(0, 5),
-      gallery: false,
+      gallery: true,
       galleryItems: 20,
     };
     this.changeGiphy = this.changeGiphy.bind(this);
@@ -33,7 +34,6 @@ class Animal extends React.Component {
       history.push('/');
     } else {
       giphyActions.fetchGiphies(dispatch, query);
-      this.timer = setInterval(this.changeGiphy, 4500);
     }
   }
 
@@ -125,10 +125,11 @@ class Animal extends React.Component {
           <Controls handleClick={e => this.handleClick(e)} handleView={e => this.handleView(e)} gallery={gallery} />
           {loading && <div className={style.loading}>Loading Giphy...</div>}
           {(giphy && !gallery) && (<GiphyRandom giphy={giphy} />)}
-          {(giphy && gallery) && (<GiphyGallery giphies={giphiesGallery} />)}
+          {(giphy && gallery) && (<GiphyGallery giphies={giphiesGallery} allGiphies={giphies} />)}
           {(galleryItems < 100 && gallery)
             && <div className={style.giphiesLoading}>There are more giphies coming...</div>}
         </div>
+        <Route exact path="/animal/:id" component={GiphyModal} />
       </Layout>
     );
   }
