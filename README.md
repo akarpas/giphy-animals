@@ -29,13 +29,13 @@ Client will run on localhost:3000
 ### SCREENSHOTS
 
 ##### MOBILE
-![Mobile 1](./screenshots/mobile_1.png?raw=true "Mobile 1"){ width=50% }
-![Mobile 2](./screenshots/mobile_2.png?raw=true "Mobile 2"){ width=50% }
-![Mobile 3](./screenshots/mobile_3.png?raw=true "Mobile 3"){ width=50% }
-![Mobile 4](./screenshots/mobile_4.png?raw=true "Mobile 4"){ width=50% }
+![Mobile 1](./screenshots/mobile_1.png?raw=true "Mobile 1"){:width=50%}
+![Mobile 2](./screenshots/mobile_2.png?raw=true "Mobile 2"){:width=50%}
+![Mobile 3](./screenshots/mobile_3.png?raw=true "Mobile 3"){:width=50%}
+![Mobile 4](./screenshots/mobile_4.png?raw=true "Mobile 4"){:width=50%}
 
 ##### DESKTOP
-![Desktop 1](./screenshots/desktop_1.png?raw=true "Desktop 1"){ width=30% }
-![Desktop 2](./screenshots/desktop_2.png?raw=true "Desktop 2"){ width=30% }
-![Desktop 3](./screenshots/desktop_3.png?raw=true "Desktop 3"){ width=30% }
-![Desktop 4](./screenshots/desktop_4.png?raw=true "Desktop 4"){ width=30% }
+![Desktop 1](./screenshots/desktop_1.png?raw=true "Desktop 1"){:width=30%}
+![Desktop 2](./screenshots/desktop_2.png?raw=true "Desktop 2"){:width=30%}
+![Desktop 3](./screenshots/desktop_3.png?raw=true "Desktop 3"){:width=30%}
+![Desktop 4](./screenshots/desktop_4.png?raw=true "Desktop 4"){:width=30%}
