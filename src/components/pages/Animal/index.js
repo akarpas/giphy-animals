@@ -11,6 +11,7 @@ class Animal extends React.Component {
     super(props);
     this.state = {
       giphyIndex: random(0, 5),
+      gallery: false,
     };
     this.changeGiphy = this.changeGiphy.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -75,24 +76,24 @@ class Animal extends React.Component {
 
   render() {
     const { loading, giphies } = this.props;
-    const { giphyIndex } = this.state;
+    const { giphyIndex, gallery } = this.state;
     const giphy = giphies && giphies[giphyIndex];
 
     return (
       <Layout>
         <div className={style.content}>
-          <div className={style.giphyContainer}>
-            {loading && <div className={style.loading}>Loading Giphy...</div>}
-            {giphy
-              && (
-                <img src={giphy.url} alt={giphy.title} className={style.gif} height="80vw" />
-              )}
-          </div>
           <div className={style.controls}>
             <button onClick={e => this.handleClick(e)} className={style.button} type="button">Flip</button>
             <Link className={style.link} to="/">
               <button className={style.button} type="button">Change</button>
             </Link>
+          </div>
+          <div className={style.giphyContainer}>
+            {loading && <div className={style.loading}>Loading Giphy...</div>}
+            {(giphy && !gallery)
+              && (
+                <img src={giphy.url} alt={giphy.title} className={style.gif} height="80vw" />
+              )}
           </div>
         </div>
       </Layout>
