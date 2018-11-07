@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import random from 'lodash.random';
 import Layout from '../../organisms/Layout';
+import Controls from '../../molecules/Controls';
 import GiphyRandom from '../../molecules/GiphyRandom';
 import GiphyGallery from '../../molecules/GiphyGallery';
 import * as giphyActions from '../../../actions/giphy';
@@ -121,16 +122,7 @@ class Animal extends React.Component {
     return (
       <Layout>
         <div className={style.content}>
-          <div className={style.controls}>
-            <button onClick={e => this.handleView(e)} className={style.button} type="button">
-              {gallery ? 'Random' : 'Gallery'}
-            </button>
-            {!gallery
-              && <button onClick={e => this.handleClick(e)} className={style.button} type="button">Flip</button>}
-            <Link className={style.link} to="/">
-              <button className={style.button} type="button">Change</button>
-            </Link>
-          </div>
+          <Controls handleClick={e => this.handleClick(e)} handleView={e => this.handleView(e)} gallery={gallery} />
           {loading && <div className={style.loading}>Loading Giphy...</div>}
           {(giphy && !gallery) && (<GiphyRandom giphy={giphy} />)}
           {(giphy && gallery) && (<GiphyGallery giphies={giphiesGallery} />)}
