@@ -52,7 +52,7 @@ describe('main content', () => {
   });
 });
 
-describe('has a gallery of inital 20 giphies', () => {
+describe('on load, has a gallery of inital 20 giphies', () => {
   beforeEach(async () => {
     mockStore().clearActions();
     await fetchGiphies(mockStore().dispatch, 'lion');
