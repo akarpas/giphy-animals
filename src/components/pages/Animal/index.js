@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import random from 'lodash.random';
 import Layout from '../../organisms/Layout';
+import GiphyRandom from '../../molecules/GiphyRandom';
 import * as giphyActions from '../../../actions/giphy';
 import style from './index.scss';
 
@@ -130,12 +131,7 @@ class Animal extends React.Component {
             </Link>
           </div>
           {loading && <div className={style.loading}>Loading Giphy...</div>}
-          {(giphy && !gallery)
-            && (
-              <div className={style.giphyContainer}>
-                <img src={giphy.url} alt={giphy.title} className={style.gif} height="80vw" />
-              </div>
-            )}
+          {(giphy && !gallery) && (<GiphyRandom giphy={giphy} />)}
           {(giphy && gallery)
             && (
               <div className={style.gallery}>

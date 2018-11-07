@@ -8,16 +8,6 @@
   color: black;
 }
 
-.giphyContainer {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: 70vh;
-  color: black;
-}
-
 .link {
   text-decoration: none;
   width: auto;
@@ -61,13 +51,6 @@
   background-color: blue;
 }
 
-.gif {
-  max-height: 80vh;
-  max-width: 90vw;
-  min-height: 50vh;
-  object-fit: contain;
-}
-
 .gallery {
   display: flex;
   flex-flow: row;
@@ -107,9 +90,6 @@
   .giphyContainer {
     height: 60vh;
   }
-  .gif {
-    max-width: 90vw;
-  }
   .gifContainer {
     width: 22%;
     height: 20vw;
@@ -117,13 +97,6 @@
   }
   .gifGallery {
     height: 20vw;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .gif {
-    min-width: 60vw;
-    max-width: 90vw;
   }
 }
 
