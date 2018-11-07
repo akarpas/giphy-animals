@@ -11,9 +11,9 @@
 .giphyContainer {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 80vw;
+  width: 100vw;
   height: 70vh;
   color: black;
 }
@@ -30,6 +30,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 1.5rem 0 1rem 0;
 }
 
 .button {
@@ -38,17 +39,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+  width: auto;
   height: auto;
-  padding: 1.25rem 1.25rem;
+  padding: 1rem 1rem;
   border: 1px solid black;
   border-radius: 5px;
   margin: 1vh 0.2rem 1vh 0.2rem;
-  font-size: 1.25rem;
   background-color: lightblue;
   color: black;
   text-align: center;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .button:hover {
@@ -60,17 +61,46 @@
   background-color: blue;
 }
 
-.iframe {
-  height: 45vh;
-  width: 90vw;
-  object-fit: contain;
-}
-
 .gif {
   max-height: 80vh;
   max-width: 90vw;
   min-height: 50vh;
   object-fit: contain;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gifContainer {
+  width: 45%;
+  height: 30vw;
+  margin: 0.25rem;
+}
+
+.gifGallery {
+  height: 30vw;
+  width: 100%;
+  object-fit: cover;
+}
+
+.loading,
+.giphiesLoading {
+  margin: 4rem 0 4rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  100% { opacity: 1; }
+  75% { opacity: 0.75; }
+  50% { opacity: 0.5; }
 }
 
 @media screen and (min-width: 1100px) {
@@ -79,6 +109,14 @@
   }
   .gif {
     max-width: 90vw;
+  }
+  .gifContainer {
+    width: 22%;
+    height: 20vw;
+    margin: 0.25rem;
+  }
+  .gifGallery {
+    height: 20vw;
   }
 }
 
