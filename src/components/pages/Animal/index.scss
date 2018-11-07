@@ -84,13 +84,13 @@
 }
 
 .gifContainer {
-  width: 20%;
-  height: 20vw;
+  width: 45%;
+  height: 30vw;
   margin: 0.25rem;
 }
 
 .gifGallery {
-  height: 20vw;
+  height: 30vw;
   width: 100%;
   object-fit: cover;
 }
@@ -101,6 +101,14 @@
   }
   .gif {
     max-width: 90vw;
+  }
+  .gifContainer {
+    width: 22%;
+    height: 20vw;
+    margin: 0.25rem;
+  }
+  .gifGallery {
+    height: 20vw;
   }
 }
 
