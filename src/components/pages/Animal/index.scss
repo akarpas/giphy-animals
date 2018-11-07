@@ -89,10 +89,18 @@
   object-fit: cover;
 }
 
+.loading,
 .giphiesLoading {
   margin: 4rem 0 4rem 0;
   font-size: 1.5rem;
   text-align: center;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  100% { opacity: 1; }
+  75% { opacity: 0.75; }
+  50% { opacity: 0.5; }
 }
 
 @media screen and (min-width: 1100px) {
