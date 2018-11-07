@@ -70,10 +70,8 @@ class Animal extends React.Component {
     );
     const windowBottom = windowHeight + window.pageYOffset;
     if (windowBottom >= docHeight) {
-      console.warn('bottom', this.state);
       const { galleryItems } = this.state;
       if (galleryItems < 100) {
-        console.warn(galleryItems);
         this.setState({ galleryItems: galleryItems + 10 });
       }
     }
