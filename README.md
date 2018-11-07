@@ -29,9 +29,7 @@ Client will run on localhost:3000
 ### SCREENSHOTS
 
 ##### MOBILE
-<img src="./screenshots/mobile_1.png" alt="mobile-1" width="25%" height="auto"> <img src="./screenshots/mobile_2.png" alt="mobile-2" width="25%" height="auto">
-<img src="./screenshots/mobile_3.png" alt="mobile-3" width="25%" height="auto"> <img src="./screenshots/mobile_4.png" alt="mobile-4" width="25%" height="auto">
+<img src="./screenshots/mobile_1.png" alt="mobile-1" width="22%" height="auto"> <img src="./screenshots/mobile_2.png" alt="mobile-2" width="22%" height="auto"> <img src="./screenshots/mobile_3.png" alt="mobile-3" width="22%" height="auto"> <img src="./screenshots/mobile_4.png" alt="mobile-4" width="22%" height="auto">
 
 ##### DESKTOP
-<img src="./screenshots/desktop_1.png" alt="desktop-1" width="35%" height="auto"> <img src="./screenshots/desktop_2.png" alt="desktop-2" width="35%" height="auto">
-<img src="./screenshots/desktop_3.png" alt="desktop-3" width="35%" height="auto"> <img src="./screenshots/desktop_4.png" alt="desktop-4" width="35%" height="auto">
+<img src="./screenshots/desktop_1.png" alt="desktop-1" width="32%" height="auto"> <img src="./screenshots/desktop_2.png" alt="desktop-2" width="32%" height="auto"> <img src="./screenshots/desktop_3.png" alt="desktop-3" width="32%" height="auto"> <img src="./screenshots/desktop_4.png" alt="desktop-4" width="32%" height="auto">
