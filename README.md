@@ -14,7 +14,7 @@ React App for Fetching Random Giphies from the Giphy API based on a list of Anim
 
 Node version is **lts/carbon**
 
-```cd client && nvm use && npm install && npm start```
+```nvm use && npm install && npm start```
 
 Client will run on localhost:3000
 
@@ -26,3 +26,16 @@ Client will run on localhost:3000
 2. Add sounds when animal is selected
 3. More UI Design
 
+### SCREENSHOTS
+
+##### MOBILE
+![Mobile 1](./screenshots/mobile_1.png?raw=true "Mobile 1")
+![Mobile 2](./screenshots/mobile_2.png?raw=true "Mobile 2")
+![Mobile 3](./screenshots/mobile_3.png?raw=true "Mobile 3")
+![Mobile 4](./screenshots/mobile_4.png?raw=true "Mobile 4")
+
+##### DESKTOP
+![Desktop 1](./screenshots/dekstop_1.png?raw=true "Desktop 1")
+![Desktop 2](./screenshots/dekstop_2.png?raw=true "Desktop 2")
+![Desktop 3](./screenshots/dekstop_3.png?raw=true "Desktop 3")
+![Desktop 4](./screenshots/dekstop_4.png?raw=true "Desktop 4")
