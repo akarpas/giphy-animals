@@ -82,6 +82,7 @@ class Animal extends React.Component {
     const { gallery } = this.state;
     if (gallery) {
       this.timer = setInterval(this.changeGiphy, 4500);
+      this.setState({ galleryItems: 20 });
     } else {
       clearInterval(this.timer);
     }
