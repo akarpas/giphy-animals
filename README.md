@@ -29,14 +29,13 @@ Client will run on localhost:3000
 ### SCREENSHOTS
 
 ##### MOBILE
-<img src="./screenshots/mobile_1.png" alt="mobile-1" width="50%" height="auto">
-![Mobile 1](./screenshots/mobile_1.png?raw=true "Mobile 1")
-![Mobile 2](./screenshots/mobile_2.png?raw=true "Mobile 2")
-![Mobile 3](./screenshots/mobile_3.png?raw=true "Mobile 3")
-![Mobile 4](./screenshots/mobile_4.png?raw=true "Mobile 4")
+<img src="./screenshots/mobile_1.png" alt="mobile-1" width="30%" height="auto">
+<img src="./screenshots/mobile_2.png" alt="mobile-2" width="30%" height="auto">
+<img src="./screenshots/mobile_3.png" alt="mobile-3" width="30%" height="auto">
+<img src="./screenshots/mobile_4.png" alt="mobile-4" width="30%" height="auto">
 
 ##### DESKTOP
-![Desktop 1](./screenshots/desktop_1.png?raw=true "Desktop 1")
-![Desktop 2](./screenshots/desktop_2.png?raw=true "Desktop 2")
-![Desktop 3](./screenshots/desktop_3.png?raw=true "Desktop 3")
-![Desktop 4](./screenshots/desktop_4.png?raw=true "Desktop 4")
+<img src="./screenshots/desktop_1.png" alt="desktop-1" width="20%" height="auto">
+<img src="./screenshots/desktop_2.png" alt="desktop-2" width="20%" height="auto">
+<img src="./screenshots/desktop_3.png" alt="desktop-3" width="20%" height="auto">
+<img src="./screenshots/desktop_4.png" alt="desktop-4" width="20%" height="auto">
