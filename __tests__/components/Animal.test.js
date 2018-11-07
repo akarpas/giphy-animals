@@ -52,11 +52,11 @@ describe('main content', () => {
   });
 });
 
-describe('has a giphy', () => {
+describe('has a gallery of inital 20 giphies', () => {
   beforeEach(async () => {
     mockStore().clearActions();
     await fetchGiphies(mockStore().dispatch, 'lion');
-    wrapper.update()
+    wrapper.update();
   }, 10000);
   afterAll(() => { // eslint-disable-line
     wrapper.unmount();
