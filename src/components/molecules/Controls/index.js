@@ -8,13 +8,13 @@ const Controls = (props) => {
 
   return (
     <div className={style.controls}>
-      <button onClick={handleView} className={style.button} type="button">
+      <button id="view" onClick={handleView} className={style.button} type="button">
         {gallery ? 'Random' : 'Gallery'}
       </button>
       {!gallery
-        && <button onClick={handleClick} className={style.button} type="button">Flip</button>}
+        && <button id="flip" onClick={handleClick} className={style.button} type="button">Flip</button>}
       <Link className={style.link} to="/">
-        <button className={style.button} type="button">Change</button>
+        <button id="change" className={style.button} type="button">Change</button>
       </Link>
     </div>
   );

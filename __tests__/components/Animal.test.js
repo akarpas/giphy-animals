@@ -42,23 +42,17 @@ describe('main content', () => {
   it('contains a header', () => {
     expect(wrapper.find('header').length).toEqual(1);
   });
-
-  it('contains a container for the giphy', () => {
-    expect(wrapper.find('.giphyContainer').length).toEqual(1);
-  });
-
   it('contains a loading text', () => {
     expect(wrapper.find('.loading').length).toEqual(1);
   });
-
-  it('contains two buttons for flipping giphies and changing animals', () => {
+  it('contains two buttons for changing view to Random and to Change animals', () => {
     expect(wrapper.find('button').length).toEqual(2);
-    expect(wrapper.find('button').at(0).props().children).toContain('Flip');
+    expect(wrapper.find('button').at(0).props().children).toContain('Random');
     expect(wrapper.find('button').at(1).props().children).toContain('Change');
   });
 });
 
-describe('has a giphy', () => {
+describe('on load, has a gallery of inital 20 giphies', () => {
   beforeEach(async () => {
     mockStore().clearActions();
     await fetchGiphies(mockStore().dispatch, 'lion');
@@ -67,14 +61,46 @@ describe('has a giphy', () => {
   afterAll(() => { // eslint-disable-line
     wrapper.unmount();
   });
-  it('contains an image for the giphy', () => {
-    expect(wrapper.find('img').length).toEqual(1);
+  setTimeout(() => {
+    it('contains a gallery container for all the giphies', () => {
+      expect(wrapper.find('.gallery').length).toEqual(1);
+    });
+    it('contains 20 images for the giphy', () => {
+      expect(wrapper.find('img').length).toEqual(20);
+    });
+    it('receives an array of giphy urls and is not loading', () => {
+      expect(typeof store.getState().giphy.giphies).toBe('object');
+      expect(typeof store.getState().giphy.giphies).toBe('object');
+      expect(store.getState().giphy.giphies[0].url).toBeTruthy();
+      expect(store.getState().giphy.giphies[0].url).toContain('https');
+      expect(store.getState().giphy.loading).toBe(false);
+    });
+  }, 1000);
+});
+
+describe('on Random button click, has a giphy', () => {
+  beforeEach(async () => {
+    mockStore().clearActions();
+    await fetchGiphies(mockStore().dispatch, 'lion');
+    wrapper.update();
+    wrapper.find('#view').simulate('click');
+    wrapper.update();
+  }, 10000);
+  afterAll(() => { // eslint-disable-line
+    wrapper.unmount();
   });
-  it('receives an array of giphy urls and is not loading', () => {
-    expect(typeof store.getState().giphy.giphies).toBe('object');
-    expect(typeof store.getState().giphy.giphies).toBe('object');
-    expect(store.getState().giphy.giphies[0].url).toBeTruthy();
-    expect(store.getState().giphy.giphies[0].url).toContain('https');
-    expect(store.getState().giphy.loading).toBe(false);
-  });
+  setTimeout(() => {
+    it('contains 3 buttons - Gallery, Flip, Change', () => {
+      expect(wrapper.find('button').length).toEqual(3);
+      expect(wrapper.find('button').at(0).props().children).toContain('Gallery');
+      expect(wrapper.find('button').at(1).props().children).toContain('Flip');
+      expect(wrapper.find('button').at(2).props().children).toContain('Change');
+    });
+    it('contains a giphy container for the random giphy', () => {
+      expect(wrapper.find('.giphyContainer').length).toEqual(1);
+    });
+    it('contains an image', () => {
+      expect(wrapper.find('img').length).toEqual(1);
+    });
+  }, 1000);
 });
