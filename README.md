@@ -3,7 +3,7 @@ React App for Fetching Random Giphies from the Giphy API based on a list of Anim
 
 ### WIREFRAME:
 
-[View](./WireframeGiphies.pdf)
+[View](./Wireframe.pdf)
 
 ### DEPLOYED
 [View](https://giphies.netlify.com)
