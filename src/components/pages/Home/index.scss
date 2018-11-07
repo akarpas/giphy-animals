@@ -41,19 +41,19 @@
   border-radius: 50%;
   margin: 1vh 0.2rem 1vh 0.2rem;
   font-size: 1.25rem;
-  background-color: lightblue;
-  color: black;
+  background-color: #54B77E;
+  color: white;
   text-align: center;
   text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: lightsteelblue;
+  background-color: #87c6a1;
 }
 
 .button:active {
-  color: darkgray;
-  background-color: blue;
+  color: white;
+  background-color: #429b67;
 }
 
 @media screen and (min-width: 500px) {
