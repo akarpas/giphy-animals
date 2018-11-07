@@ -18,10 +18,12 @@ class Animal extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
     this.handleView = this.handleView.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
+    window.addEventListener('scroll', this.handleScroll);
     const { location, dispatch, history } = this.props;
     const { query } = location;
     if (query === undefined) {
@@ -34,6 +36,7 @@ class Animal extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    window.removeEventListener('scroll', this.handleScroll);
     const { dispatch } = this.props;
     clearInterval(this.timer);
     giphyActions.clearGiphies(dispatch);
@@ -55,6 +58,24 @@ class Animal extends React.Component {
       const numberOfGiphies = giphies.length;
       const giphyIndex = random(0, numberOfGiphies - 1);
       this.setState({ giphyIndex });
+    }
+  }
+
+  handleScroll() {
+    const windowHeight = 'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const { body } = document;
+    const html = document.documentElement;
+    const docHeight = Math.max(
+      body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight,
+    );
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom >= docHeight) {
+      console.warn('bottom', this.state);
+      const { galleryItems } = this.state;
+      if (galleryItems < 100) {
+        console.warn(galleryItems);
+        this.setState({ galleryItems: galleryItems + 10 });
+      }
     }
   }
 
