@@ -72,7 +72,9 @@ class Animal extends React.Component {
     if (windowBottom >= docHeight) {
       const { galleryItems } = this.state;
       if (galleryItems < 100) {
-        this.setState({ galleryItems: galleryItems + 10 });
+        setTimeout(() => {
+          this.setState({ galleryItems: galleryItems + 10 });
+        }, 500);
       }
     }
   }
@@ -153,6 +155,8 @@ class Animal extends React.Component {
                 })}
               </div>
             )}
+          {(galleryItems < 100 && gallery)
+            && <div className={style.giphiesLoading}>There are more giphies coming...</div>}
         </div>
       </Layout>
     );
