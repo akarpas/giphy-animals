@@ -19,7 +19,7 @@ const Application = () => {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} key="1" />
-            <Route exact path="/animal" component={Animal} key="2" />
+            <Route path="/animal" component={Animal} key="2" />
           </Switch>
         </BrowserRouter>
       </Provider>
