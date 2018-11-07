@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import random from 'lodash.random';
 import Layout from '../../organisms/Layout';
 import GiphyRandom from '../../molecules/GiphyRandom';
+import GiphyGallery from '../../molecules/GiphyGallery';
 import * as giphyActions from '../../../actions/giphy';
 import style from './index.scss';
 
@@ -132,25 +133,7 @@ class Animal extends React.Component {
           </div>
           {loading && <div className={style.loading}>Loading Giphy...</div>}
           {(giphy && !gallery) && (<GiphyRandom giphy={giphy} />)}
-          {(giphy && gallery)
-            && (
-              <div className={style.gallery}>
-                {giphiesGallery.map((singleGiphy) => {
-                  const key = singleGiphy.url.split('media/')[1];
-                  return (
-                    <div key={`${key}-container`} className={style.gifContainer}>
-                      <img
-                        key={key}
-                        src={singleGiphy.url}
-                        alt={singleGiphy.title}
-                        className={style.gifGallery}
-                        height="20vw"
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-            )}
+          {(giphy && gallery) && (<GiphyGallery giphies={giphiesGallery} />)}
           {(galleryItems < 100 && gallery)
             && <div className={style.giphiesLoading}>There are more giphies coming...</div>}
         </div>
