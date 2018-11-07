@@ -35,7 +35,7 @@ Client will run on localhost:3000
 ![Mobile 4](./screenshots/mobile_4.png?raw=true "Mobile 4")
 
 ##### DESKTOP
-![Desktop 1](./screenshots/dekstop_1.png?raw=true "Desktop 1")
-![Desktop 2](./screenshots/dekstop_2.png?raw=true "Desktop 2")
-![Desktop 3](./screenshots/dekstop_3.png?raw=true "Desktop 3")
-![Desktop 4](./screenshots/dekstop_4.png?raw=true "Desktop 4")
+![Desktop 1](./screenshots/desktop_1.png?raw=true "Desktop 1")
+![Desktop 2](./screenshots/desktop_2.png?raw=true "Desktop 2")
+![Desktop 3](./screenshots/desktop_3.png?raw=true "Desktop 3")
+![Desktop 4](./screenshots/desktop_4.png?raw=true "Desktop 4")
