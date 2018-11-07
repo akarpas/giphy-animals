@@ -101,7 +101,8 @@ class Animal extends React.Component {
             <button onClick={e => this.handleView(e)} className={style.button} type="button">
               {gallery ? 'Random' : 'Gallery'}
             </button>
-            <button onClick={e => this.handleClick(e)} className={style.button} type="button">Flip</button>
+            {!gallery
+              && <button onClick={e => this.handleClick(e)} className={style.button} type="button">Flip</button>}
             <Link className={style.link} to="/">
               <button className={style.button} type="button">Change</button>
             </Link>
