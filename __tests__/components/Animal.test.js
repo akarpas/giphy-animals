@@ -77,3 +77,30 @@ describe('on load, has a gallery of inital 20 giphies', () => {
     });
   }, 1000);
 });
+
+describe('on Random button click, has a giphy', () => {
+  beforeEach(async () => {
+    mockStore().clearActions();
+    await fetchGiphies(mockStore().dispatch, 'lion');
+    wrapper.update();
+    wrapper.find('#view').simulate('click');
+    wrapper.update();
+  }, 10000);
+  afterAll(() => { // eslint-disable-line
+    wrapper.unmount();
+  });
+  setTimeout(() => {
+    it('contains 3 buttons - Gallery, Flip, Change', () => {
+      expect(wrapper.find('button').length).toEqual(3);
+      expect(wrapper.find('button').at(0).props().children).toContain('Gallery');
+      expect(wrapper.find('button').at(1).props().children).toContain('Flip');
+      expect(wrapper.find('button').at(2).props().children).toContain('Change');
+    });
+    it('contains a giphy container for the random giphy', () => {
+      expect(wrapper.find('.giphyContainer').length).toEqual(1);
+    });
+    it('contains an image', () => {
+      expect(wrapper.find('img').length).toEqual(1);
+    });
+  }, 1000);
+});
