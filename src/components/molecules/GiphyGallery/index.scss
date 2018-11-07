@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gifContainer {
+  width: 45%;
+  height: 30vw;
+  margin: 0.25rem;
+}
+
+.gifGallery {
+  height: 30vw;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1100px) {
+  .gifContainer {
+    width: 22%;
+    height: 20vw;
+    margin: 0.25rem;
+  }
+  .gifGallery {
+    height: 20vw;
+  }
+}
