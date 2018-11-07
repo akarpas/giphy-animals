@@ -39,17 +39,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+  width: auto;
   height: auto;
-  padding: 1.25rem 1.25rem;
+  padding: 1rem 1rem;
   border: 1px solid black;
   border-radius: 5px;
   margin: 1vh 0.2rem 1vh 0.2rem;
-  font-size: 1.25rem;
   background-color: lightblue;
   color: black;
   text-align: center;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .button:hover {
