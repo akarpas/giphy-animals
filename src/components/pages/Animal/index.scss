@@ -74,6 +74,27 @@
   object-fit: contain;
 }
 
+.gallery {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gifContainer {
+  width: 20%;
+  height: 20vw;
+  margin: 0.25rem;
+}
+
+.gifGallery {
+  height: 20vw;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 1100px) {
   .giphyContainer {
     height: 60vh;

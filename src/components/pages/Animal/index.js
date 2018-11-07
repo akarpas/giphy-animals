@@ -12,10 +12,12 @@ class Animal extends React.Component {
     this.state = {
       giphyIndex: random(0, 5),
       gallery: false,
+      galleryItems: 20,
     };
     this.changeGiphy = this.changeGiphy.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+    this.handleView = this.handleView.bind(this);
   }
 
   componentDidMount() {
@@ -56,6 +58,17 @@ class Animal extends React.Component {
     }
   }
 
+  handleView(e) {
+    e.preventDefault();
+    const { gallery } = this.state;
+    if (gallery) {
+      this.timer = setInterval(this.changeGiphy, 4500);
+    } else {
+      clearInterval(this.timer);
+    }
+    this.setState({ gallery: !gallery });
+  }
+
   handleClick(e) {
     e.preventDefault();
     const { giphyIndex } = this.state;
@@ -76,25 +89,49 @@ class Animal extends React.Component {
 
   render() {
     const { loading, giphies } = this.props;
-    const { giphyIndex, gallery } = this.state;
+    const { giphyIndex, gallery, galleryItems } = this.state;
     const giphy = giphies && giphies[giphyIndex];
+    const clonedGiphies = giphies && giphies.slice();
+    const giphiesGallery = giphies && clonedGiphies.splice(0, galleryItems);
 
     return (
       <Layout>
         <div className={style.content}>
           <div className={style.controls}>
+            <button onClick={e => this.handleView(e)} className={style.button} type="button">
+              {gallery ? 'Random' : 'Gallery'}
+            </button>
             <button onClick={e => this.handleClick(e)} className={style.button} type="button">Flip</button>
             <Link className={style.link} to="/">
               <button className={style.button} type="button">Change</button>
             </Link>
           </div>
-          <div className={style.giphyContainer}>
-            {loading && <div className={style.loading}>Loading Giphy...</div>}
-            {(giphy && !gallery)
-              && (
+          {loading && <div className={style.loading}>Loading Giphy...</div>}
+          {(giphy && !gallery)
+            && (
+              <div className={style.giphyContainer}>
                 <img src={giphy.url} alt={giphy.title} className={style.gif} height="80vw" />
-              )}
-          </div>
+              </div>
+            )}
+          {(giphy && gallery)
+            && (
+              <div className={style.gallery}>
+                {giphiesGallery.map((singleGiphy) => {
+                  const key = singleGiphy.url.split('media/')[1];
+                  return (
+                    <div key={`${key}-container`} className={style.gifContainer}>
+                      <img
+                        key={key}
+                        src={singleGiphy.url}
+                        alt={singleGiphy.title}
+                        className={style.gifGallery}
+                        height="20vw"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
         </div>
       </Layout>
     );
