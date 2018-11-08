@@ -22,9 +22,10 @@ Client will run on localhost:3000
 ```nvm use && npm install && npm run test``` or ```nvm use && npm install && npm run test:watch```
 
 ### ADDITIONAL IMPROVEMENTS THAT CAN BE IMPLEMENTED
-1. Add tests for GiphyModal component
-2. Add sounds when animal is selected
-3. More UI Design
+1. Use onload prop of image to wait for all Giphies to load and then start showing them (for slow connections)
+2. Add tests for GiphyModal component
+3. Add sounds when animal is selected
+4. More UI Design
 
 ### SCREENSHOTS
 
